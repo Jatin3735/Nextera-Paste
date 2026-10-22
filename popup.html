@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nextera Paste</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 10px;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #3b78e7;
+    }
+    button:disabled {
+      background-color: #a0a0a0;
+      cursor: not-allowed;
+    }
+    .status {
+      margin-top: 10px;
+      color: #666;
+      font-size: 12px;
+      min-height: 16px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .header h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .github-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      color: #333;
+      text-decoration: none;
+      border-radius: 50%;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .github-link:hover {
+      background-color: #f0f0f0;
+      color: #000;
+    }
+    .github-link svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+    .footer {
+      margin-top: 12px;
+      padding-top: 8px;
+      border-top: 1px solid #eee;
+      font-size: 11px;
+      color: #999;
+      text-align: center;
+    }
+    .footer a {
+      color: #4285f4;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>Nextera Paste</h2>
+    <a
+      href="https://github.com/jatin3735"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="github-link"
+      title="View on GitHub — jatin3735"
+      aria-label="GitHub profile"
+    >
+      <!-- GitHub logo (octicon mark-github) -->
+      <svg viewBox="0 0 16 16" role="img" aria-hidden="true">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+                 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+                 -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
+                 .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
+                 -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0
+                 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82
+                 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01
+                 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+      </svg>
+    </a>
+  </div>
+
+  <p>Paste your text below and click "Send" to have it typed character by character into the active page:</p>
+
+  <textarea id="pasteText" placeholder="Paste your text here..."></textarea>
+  <button id="sendButton">Send</button>
+  <div id="status" class="status"></div>
+
+  <div class="footer">
+    Made with <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16"  
+fill="#ff0000" viewBox="0 0 24 24" >
+<!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41-2.3-2.28-5.85-2.35-8.21-.2-2.36-2.15-5.91-2.09-8.21.2-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0 1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z"></path>
+</svg> by
+    <a href="https://github.com/jatin3735" target="_blank" rel="noopener noreferrer">jatin3735</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

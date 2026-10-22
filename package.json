@@ -1,0 +1,17 @@
+{
+  "name": "Nextera Paste",
+  "version": "1.1.0",
+  "description": "Browser extension that allows pasting text on sites that have disabled it",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build:store": "./scripts/build-store.sh"
+  },
+  "devDependencies": {
+    "jsdom": "^25.0.0",
+    "vitest": "^4.0.14"
+  },
+  "keywords": ["browser-extension", "paste", "clipboard"],
+  "license": "MIT"
+}
